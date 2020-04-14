@@ -28,9 +28,9 @@ class Handler {
 
 let instance = null;
 let eventEnv = false;
-const handlderMap = new Hander();
+const handlerMap = new Handler();
 
-class EventBus {
+export class EventBus {
 	static get() {
 		if (!instance) {
 		  eventEnv = true;
@@ -41,7 +41,7 @@ class EventBus {
 		return instance;
 	}
 
-	constructor() {} {
+	constructor() {
 		if (!eventEnv)
 			throw new Error('use EventBus.get() to get EventBus Instance');	
 	}
@@ -59,5 +59,3 @@ class EventBus {
 			.forEach(handler => handler && handler(params));
 	}
 }
-
-export default new EventBus();;

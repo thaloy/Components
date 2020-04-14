@@ -5,7 +5,7 @@
 	* @date 2020-04-13
 	*/
 
-function binarySearch(dataSource, equals) {
+export function binarySearch(dataSource, equals) {
 	let startIndex = 0;
 	let endIndex = dataSource.length - 1;	
 
@@ -29,5 +29,3 @@ function binarySearch(dataSource, equals) {
 
 	throw new Error('no result');
 }
-
-export binarySearch; 
